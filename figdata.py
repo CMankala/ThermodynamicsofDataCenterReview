@@ -1,0 +1,137 @@
+"""Curated figure data. Every value is taken from the extracted evidence of the cited study
+(reference numbers follow the RSER manuscript numbering). Evidence class:
+M = measured (field or laboratory), S = simulated/modelled, C = compiled from secondary sources."""
+
+# Fig. 4 - PUE by cooling architecture: (category, low, high, ref, class, note)
+PUE = [
+ ("Air (room/row)", 1.1, 2.9, 2, "C", "compiled range"),
+ ("Air (room/row)", 1.4, 1.5, 6, "C", "literature average"),
+ ("Air (room/row)", 1.5, 1.8, 11, "C", ""),
+ ("Air (room/row)", 1.51, 1.51, 6, "C", "US average"),
+ ("Air (room/row)", 1.504, 1.707, 20, "S", "four climates"),
+ ("Air (room/row)", 1.287, 1.325, 21, "S", "peak hour, towers"),
+ ("Air (room/row)", 1.1438, 1.2082, 18, "S", "ideal equal-ΔT plant"),
+ ("Air (room/row)", 2.18, 2.18, 56, "M", "open room"),
+ ("Air (room/row)", 1.52, 1.52, 56, "M", "in-row containment"),
+ ("Air (room/row)", 1.32, 1.53, 56, "M", "free cooling, winter–summer"),
+ ("Air (room/row)", 2.54, 2.54, 80, "M", "reference unit"),
+ ("Air (room/row)", 1.35, 1.78, 10, "C", "tropical facilities"),
+ ("Cold plate / direct-to-chip", 1.1, 1.3, 2, "C", ""),
+ ("Cold plate / direct-to-chip", 1.17, 1.30, 5, "C", ""),
+ ("Cold plate / direct-to-chip", 1.1, 1.25, 11, "C", ""),
+ ("Cold plate / direct-to-chip", 1.07, 1.07, 4, "C", "GWDG after retrofit"),
+ ("Cold plate / direct-to-chip", 1.15, 1.15, 5, "C", "Aquasar, 60 °C water"),
+ ("Cold plate / direct-to-chip", 1.125, 1.135, 20, "S", "four climates"),
+ ("Cold plate / direct-to-chip", 1.18, 1.25, 21, "S", "32 °C supply, ΔT 5–10 K"),
+ ("Cold plate / direct-to-chip", 1.143, 1.149, 21, "S", "peak hour"),
+ ("Cold plate / direct-to-chip", 1.24, 1.24, 21, "M", "site validation"),
+ ("Cold plate / direct-to-chip", 1.03, 1.03, 28, "S", "60 °C retrofit optimum"),
+ ("Cold plate / direct-to-chip", 1.107, 1.158, 10, "C", "RL vs PID"),
+ ("Cold plate / direct-to-chip", 1.15, 1.15, 29, "S", "two-phase D2C"),
+ ("Single-phase immersion", 1.02, 1.04, 2, "C", ""),
+ ("Single-phase immersion", 1.05, 1.1, 11, "C", ""),
+ ("Single-phase immersion", 1.03, 1.17, 11, "C", "mineral oil"),
+ ("Single-phase immersion", 1.03, 1.03, 4, "C", "commercial"),
+ ("Single-phase immersion", 1.02, 1.02, 6, "C", "lowest reported"),
+ ("Single-phase immersion", 1.07, 1.07, 31, "S", "pump-driven, CFD"),
+ ("Single-phase immersion", 1.16, 1.16, 16, "S", "baseline with chiller"),
+ ("Two-phase immersion", 1.15, 1.40, 7, "M", "lab tank, load-dependent"),
+ ("Two-phase immersion", 1.037, 1.053, 7, "M", "pPUE, lab boundary"),
+ ("Two-phase immersion", 1.03, 1.03, 7, "M", "server level"),
+ ("Two-phase immersion", 1.046, 1.064, 78, "S", "six cities"),
+ ("Two-phase immersion", 1.09, 1.14, 16, "S", "with/without recovery"),
+ ("Hybrid immersion / cold plate + air", 1.34, 1.38, 2, "C", ""),
+ ("Hybrid immersion / cold plate + air", 1.21, 1.35, 49, "M", "25–45 °C inlet"),
+ ("Fan-only (no refrigeration)", 1.01, 1.05, 30, "S", "DC fans only"),
+ ("Fan-only (no refrigeration)", 1.025, 1.036, 30, "M", "benchmark vs model"),
+]
+
+# Fig. 5 - heat flux (W/cm2): (category, low, high, ref, class, label)
+HEATFLUX = [
+ ("Forced air", 2, 2, 14, "C", "finned air limit"),
+ ("Forced air", 37, 37, 66, "C", "air limit"),
+ ("Forced air", 37, 37, 80, "C", ""),
+ ("Single-phase cold plate / microchannel", 17.8, 17.8, 37, "M", "1 kW, 75 mm die"),
+ ("Single-phase cold plate / microchannel", 17.78, 17.78, 38, "M", ""),
+ ("Single-phase cold plate / microchannel", 2.68, 170, 46, "C", "spreader studies"),
+ ("Single-phase cold plate / microchannel", 112, 112, 71, "S", "CFD benchmark"),
+ ("Single-phase cold plate / microchannel", 450, 450, 4, "C", "single-phase limit"),
+ ("Single-phase cold plate / microchannel", 1000, 1842, 4, "C", "liquid-metal manifold"),
+ ("Single-phase cold plate / microchannel", 1000, 1000, 39, "S", "imposed hotspot"),
+ ("Two-phase flow boiling / wicks (CHF)", 221, 221, 47, "M", "micropillar, 61 kPa"),
+ ("Two-phase flow boiling / wicks (CHF)", 213.7, 414.5, 48, "M", "copper foams"),
+ ("Two-phase flow boiling / wicks (CHF)", 621.5, 621.5, 7, "C", "biporous wick"),
+ ("Two-phase flow boiling / wicks (CHF)", 1041, 1041, 7, "C", "jet/pin-fin hybrid"),
+ ("Two-phase flow boiling / wicks (CHF)", 313, 420, 12, "C", "sintered channels"),
+ ("Two-phase flow boiling / wicks (CHF)", 693.1, 693.1, 12, "C", "perforated mesh"),
+ ("Two-phase flow boiling / wicks (CHF)", 705.6, 705.6, 12, "C", "manifold boiling"),
+ ("Two-phase flow boiling / wicks (CHF)", 1230, 1850, 12, "C", "nanoporous membrane"),
+ ("Two-phase flow boiling / wicks (CHF)", 1200, 1200, 14, "C", "inverse-opal"),
+ ("Jet / spray", 1273, 1273, 12, "C", "3D-printed spray"),
+ ("Jet / spray", 3000, 3000, 14, "C", "jet-manifold"),
+ ("Immersion pool boiling", 25.3, 40.4, 77, "M", "plain / mesh surface"),
+ ("Immersion pool boiling", 27.76, 27.76, 78, "M", "smooth copper"),
+ ("Immersion pool boiling", 106, 106, 78, "M", "heat-pipe array"),
+ ("Immersion pool boiling", 100.45, 100.45, 77, "M", "vapor-chamber spreader"),
+]
+
+# Fig. 6 - absolute thermal resistance (K/W): (category, low, high, ref, class, label)
+RTH = [
+ ("Single-phase cold plate", 0.0069, 0.0106, 37, "M", "diamond pin fins, 1 kW"),
+ ("Single-phase cold plate", 0.0069, 0.0119, 38, "M", ""),
+ ("Single-phase cold plate", 0.0173, 0.0201, 52, "M", "biomimetic, nanofluid"),
+ ("Single-phase cold plate", 0.052, 0.078, 53, "S", "serpentine, ribs"),
+ ("Single-phase cold plate", 0.172, 0.394, 43, "M", "30–70 W server plates"),
+ ("Single-phase cold plate", 0.128, 0.40, 44, "S", "mini-channels"),
+ ("Porous / pin-fin heat sink", 12.9, 19.27, 41, "S", "porous fins"),
+ ("Vapor chamber / spreader", 0.026, 0.033, 76, "M", "multi-die, 600 W"),
+ ("Vapor chamber / spreader", 0.062, 0.111, 76, "S", "single vs multi-die"),
+ ("Vapor chamber / spreader", 0.045, 0.051, 77, "M", "900 W"),
+ ("Single-phase immersion", 4.9, 7.8, 65, "M", "natural convection, 13 fluids"),
+ ("Single-phase immersion", 0.2, 0.2, 81, "M", "CPU, forced"),
+ ("Two-phase immersion / boiling", 0.028, 0.058, 79, "M", "heat-pipe integrated"),
+ ("Two-phase immersion / boiling", 0.36, 0.36, 78, "M", "heat-pipe array"),
+ ("Two-phase immersion / boiling", 1.2, 2.8, 82, "M", "power-supply case"),
+]
+
+# Fig. 7 - COP by conversion step: (category, low, high, ref, class, label)
+COP = [
+ ("Sorption chiller (thermal COP)", 0.289, 0.449, 91, "M", "65–85 °C drive"),
+ ("Sorption chiller (thermal COP)", 0.62, 0.86, 5, "C", "50–95 °C drive"),
+ ("Heat pump (heating)", 1.93, 3.01, 86, "S", "four cities"),
+ ("Heat pump (heating)", 3.52, 3.52, 17, "S", ""),
+ ("Heat pump (heating)", 2.5, 4.0, 93, "S", "55→85 °C"),
+ ("Heat pump (heating)", 3.28, 3.46, 94, "S", "110 °C condensing"),
+ ("Heat pump (heating)", 3.77, 4.38, 88, "S", "ground-source"),
+ ("Vapour-compression chiller / plant", 4.56, 12.96, 18, "M", "1–6 stage series"),
+ ("Vapour-compression chiller / plant", 3.38, 6.56, 62, "S", "hybrid seawater"),
+ ("Vapour-compression chiller / plant", 3.39, 4.05, 99, "S", "aged, year 15"),
+ ("Vapour-compression chiller / plant", 1.12, 5.8, 135, "S", "assumed, heatwave"),
+ ("Vapour-compression chiller / plant", 4.77, 11.26, 80, "M", "immersion plant"),
+ ("Vapour-compression chiller / plant", 2.5, 6.67, 7, "C", "two-phase tank"),
+ ("Vapour-compression chiller / plant", 3.28, 6.88, 97, "S", "district cooling"),
+ ("Chiller-less rejection (fans + pumps)", 18.4, 36.7, 32, "M", "dew-point, field year"),
+ ("Chiller-less rejection (fans + pumps)", 52.5, 52.5, 32, "M", "lab rating point"),
+ ("Chiller-less rejection (fans + pumps)", 19.0, 26.7, 7, "C", "two-phase immersion"),
+ ("Chiller-less rejection (fans + pumps)", 27.07, 38.71, 7, "C", "multi-mode condenser"),
+ ("Chiller-less rejection (fans + pumps)", 30.93, 35.24, 78, "S", "six cities"),
+ ("Chip-level hydraulic COP", 907.9, 2750.3, 50, "S", "jet impingement"),
+ ("Chip-level hydraulic COP", 13000, 13000, 14, "C", "jet-manifold"),
+]
+
+# Fig. 8 - closed-loop control savings vs baseline (%): (label, low, high, ref, class, baseline)
+CONTROL = [
+ ("Physics-informed MPC, hybrid plant", 23.5, 26.5, 98, "S", "fixed setpoint"),
+ ("Adaptive MPC, 15-year lifecycle", 12.4, 12.4, 99, "S", "fixed setpoint"),
+ ("Compute–cooling coordination, air", 23.9, 23.9, 100, "S", "uncoordinated"),
+ ("Compute–cooling coordination, cold plate", 8.4, 8.4, 100, "S", "uncoordinated"),
+ ("Hierarchical multi-agent RL (cost)", 23.6, 23.6, 101, "S", "rule-based"),
+ ("LLM-guided multi-agent RL (cost)", 9.35, 9.35, 102, "S", "rule-based"),
+ ("LLM-guided multi-agent RL (cost)", 0.94, 0.94, 102, "S", "tuned MAPPO"),
+ ("64 RL studies (median)", 10.0, 16.3, 10, "C", "mixed"),
+]
+
+STUDY_TYPES = [("Numerical / CFD", 35), ("Experimental", 30), ("Optimization / planning", 26),
+               ("ML / data-driven control", 19), ("Review", 14), ("Analytical model", 10),
+               ("Techno-economic", 4), ("Field case study", 4), ("Other", 4)]
+YEARS = [(2017, 1), (2018, 1), (2019, 1), (2020, 1), (2021, 2), (2022, 4), (2023, 11), (2024, 8), (2025, 10), (2026, 86), (2027, 21)]
